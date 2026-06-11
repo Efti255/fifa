@@ -22,123 +22,126 @@ input,select,textarea{font-family:inherit}
 ::-webkit-scrollbar-thumb{background:#2a3142;border-radius:4px}
 ::-webkit-scrollbar-thumb:hover{background:#3a4258}
 
-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(11,13,18,.95),rgba(11,13,18,.85));backdrop-filter:blur(14px);border-bottom:1px solid #1f2533;padding:14px 22px}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(11,13,18,.95),rgba(11,13,18,.85));backdrop-filter:blur(14px);border-bottom:1px solid #1f2533;padding:12px 22px}
 .hdr{display:flex;align-items:center;gap:18px;max-width:1700px;margin:auto}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.5px;cursor:pointer}
-.logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#fff;font-weight:900;font-size:18px;box-shadow:0 4px 20px rgba(255,59,107,.4)}
+.logo-mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#fff;font-weight:900;font-size:16px;box-shadow:0 4px 20px rgba(255,59,107,.4)}
 .logo small{display:block;font-size:10px;color:var(--mut);font-weight:500;letter-spacing:1px}
 .search{flex:1;max-width:560px;position:relative}
-.search input{width:100%;padding:11px 18px 11px 42px;background:var(--card);border:1px solid #232938;border-radius:30px;color:var(--txt);font-size:14px;outline:none;transition:.2s}
+.search input{width:100%;padding:10px 16px 10px 40px;background:var(--card);border:1px solid #232938;border-radius:30px;color:var(--txt);font-size:14px;outline:none;transition:.2s}
 .search input:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(255,59,107,.15)}
 .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mut);width:18px;height:18px}
 .hdr-right{display:flex;gap:10px;align-items:center}
-.btn-icon{width:40px;height:40px;border-radius:10px;background:var(--card);display:grid;place-items:center;color:var(--txt);transition:.2s;border:1px solid #232938}
+.btn-icon{width:38px;height:38px;border-radius:9px;background:var(--card);display:grid;place-items:center;color:var(--txt);transition:.2s;border:1px solid #232938}
 .btn-icon:hover{background:var(--card2);transform:translateY(-1px)}
 .btn-icon svg{width:18px;height:18px}
 .btn-icon.active{background:var(--acc);border-color:var(--acc);color:#fff}
 
-/* Sticky big player */
+/* Smaller sticky player */
 .player-sticky{
-  position:sticky;top:78px;z-index:40;
-  background:var(--bg);padding:0 22px 16px;
+  position:sticky;top:74px;z-index:40;
+  background:var(--bg);padding:0 22px 12px;
 }
 .player-wrap{
-  background:#000;border-radius:18px;overflow:hidden;position:relative;
-  aspect-ratio:16/9;width:100%;max-width:1280px;margin:0 auto;
-  box-shadow:0 10px 40px rgba(0,0,0,.5);
+  background:#000;border-radius:14px;overflow:hidden;position:relative;
+  aspect-ratio:16/9;width:100%;max-width:1100px;margin:0 auto;
+  box-shadow:0 6px 24px rgba(0,0,0,.5);
 }
 .player-wrap video{width:100%;height:100%;background:#000;display:block;object-fit:contain}
 .player-overlay{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle,#1a1d28,#0b0d12);color:var(--mut);text-align:center;padding:20px}
-.player-overlay .big{font-size:60px;margin-bottom:14px;opacity:.5}
+.player-overlay .big{font-size:48px;margin-bottom:10px;opacity:.5}
+.player-overlay .small{font-size:11px;margin-top:8px;opacity:.5}
 
-/* Custom player controls */
+/* Compact custom player controls */
 .pctrls{
-  position:absolute;left:0;right:0;bottom:0;padding:14px 18px;
+  position:absolute;left:0;right:0;bottom:0;padding:8px 12px;
   background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);
-  display:flex;align-items:center;gap:10px;opacity:0;transition:.25s;
+  display:flex;align-items:center;gap:6px;opacity:0;transition:.25s;
   z-index:5;
 }
 .player-wrap:hover .pctrls,.player-wrap.paused .pctrls{opacity:1}
 .pbtn{
-  width:36px;height:36px;border-radius:8px;display:grid;place-items:center;
+  width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
   background:rgba(255,255,255,.1);color:#fff;transition:.2s;flex-shrink:0;
 }
 .pbtn:hover{background:rgba(255,255,255,.2)}
-.pbtn svg{width:18px;height:18px}
-.pbtn.lg{width:44px;height:44px}
-.pbtn.lg svg{width:22px;height:22px}
-.pvol{display:flex;align-items:center;gap:6px}
-.pvol input[type=range]{width:80px;accent-color:var(--acc)}
+.pbtn svg{width:16px;height:16px}
+.pbtn.lg{width:36px;height:36px}
+.pbtn.lg svg{width:18px;height:18px}
+.pvol{display:flex;align-items:center;gap:4px}
+.pvol input[type=range]{width:60px;accent-color:var(--acc);height:3px}
 .ptitle{
-  color:#fff;font-size:13px;font-weight:600;flex:1;min-width:0;
+  color:#fff;font-size:12px;font-weight:600;flex:1;min-width:0;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  padding:0 6px;
 }
 .pinfo{
-  color:rgba(255,255,255,.7);font-size:11px;font-family:monospace;
-  padding:2px 6px;background:rgba(0,0,0,.5);border-radius:4px;
+  color:rgba(255,255,255,.7);font-size:10px;font-family:monospace;
+  padding:2px 5px;background:rgba(0,0,0,.5);border-radius:4px;
+  letter-spacing:.5px;
 }
 
-.catbar{display:flex;gap:10px;padding:0 22px 14px;overflow-x:auto;max-width:1700px;margin:auto;scrollbar-width:none}
+.catbar{display:flex;gap:10px;padding:0 22px 12px;overflow-x:auto;max-width:1700px;margin:auto;scrollbar-width:none}
 .catbar::-webkit-scrollbar{display:none}
-.cat{padding:8px 16px;border-radius:24px;background:var(--card);border:1px solid #232938;font-size:13px;font-weight:600;white-space:nowrap;transition:.2s;display:flex;align-items:center;gap:6px}
+.cat{padding:7px 14px;border-radius:24px;background:var(--card);border:1px solid #232938;font-size:13px;font-weight:600;white-space:nowrap;transition:.2s;display:flex;align-items:center;gap:6px}
 .cat:hover{background:var(--card2)}
 .cat.active{background:linear-gradient(135deg,var(--acc),var(--acc2));border-color:transparent;color:#fff}
 .cat.football{background:linear-gradient(135deg,#16a34a,#22c55e);border-color:transparent;color:#fff}
 .cat .ct{background:rgba(0,0,0,.2);padding:2px 8px;border-radius:10px;font-size:11px}
 
-.banner{margin:0 22px 16px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(135deg,#0a3d1f,#1a5e2e,#0a3d1f);padding:22px 26px;display:flex;align-items:center;gap:18px;border:1px solid #1f5c2c;cursor:pointer;transition:.3s}
+.banner{margin:0 22px 12px;border-radius:14px;overflow:hidden;position:relative;background:linear-gradient(135deg,#0a3d1f,#1a5e2e,#0a3d1f);padding:18px 22px;display:flex;align-items:center;gap:14px;border:1px solid #1f5c2c;cursor:pointer;transition:.3s}
 .banner:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,197,94,.3)}
-.banner-icon{width:60px;height:60px;border-radius:14px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:30px;flex-shrink:0;animation:pulse 2s infinite}
+.banner-icon{width:50px;height:50px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:26px;flex-shrink:0;animation:pulse 2s infinite}
 @keyframes pulse{50%{transform:scale(1.05)}}
-.banner h2{font-size:20px;margin-bottom:4px}
-.banner p{color:#c8e6c9;font-size:13px}
-.banner .live-dot{position:absolute;top:18px;right:18px;background:#ef4444;color:#fff;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:700;display:flex;align-items:center;gap:6px}
-.live-dot::before{content:"";width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1s infinite}
+.banner h2{font-size:18px;margin-bottom:2px}
+.banner p{color:#c8e6c9;font-size:12px}
+.banner .live-dot{position:absolute;top:14px;right:14px;background:#ef4444;color:#fff;padding:3px 8px;border-radius:12px;font-size:10px;font-weight:700;display:flex;align-items:center;gap:5px}
+.live-dot::before{content:"";width:5px;height:5px;background:#fff;border-radius:50%;animation:blink 1s infinite}
 @keyframes blink{50%{opacity:.3}}
 
 .main{padding:0 22px 22px;max-width:1700px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px}
-.ch{background:var(--card);border-radius:14px;padding:14px 10px;text-align:center;cursor:pointer;transition:.2s;border:1px solid #1d2230;position:relative;overflow:hidden}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.ch{background:var(--card);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:.2s;border:1px solid #1d2230;position:relative;overflow:hidden}
 .ch:hover{transform:translateY(-3px);border-color:var(--acc);background:var(--card2)}
 .ch.active{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc)}
-.ch-img{width:74px;height:74px;border-radius:14px;background:#fff;margin:0 auto 10px;display:grid;place-items:center;overflow:hidden;position:relative}
-.ch-img img{width:100%;height:100%;object-fit:contain;padding:6px;background:#fff}
-.ch-img .fallback{font-size:24px;font-weight:800;color:#fff;display:grid;place-items:center;width:100%;height:100%;border-radius:14px}
-.ch-name{font-size:12.5px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:32px}
-.ch-grp{font-size:10.5px;color:var(--mut);margin-top:3px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-.ch-fav{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,.6);display:grid;place-items:center;opacity:0;transition:.2s;z-index:2}
+.ch-img{width:64px;height:64px;border-radius:12px;background:#fff;margin:0 auto 8px;display:grid;place-items:center;overflow:hidden;position:relative}
+.ch-img img{width:100%;height:100%;object-fit:contain;padding:5px;background:#fff}
+.ch-img .fallback{font-size:20px;font-weight:800;color:#fff;display:grid;place-items:center;width:100%;height:100%;border-radius:12px}
+.ch-name{font-size:12px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:30px}
+.ch-grp{font-size:10px;color:var(--mut);margin-top:2px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.ch-fav{position:absolute;top:5px;right:5px;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.6);display:grid;place-items:center;opacity:0;transition:.2s;z-index:2}
 .ch:hover .ch-fav,.ch.active .ch-fav{opacity:1}
 .ch-fav.faved{color:var(--gold);opacity:1}
-.ch-fav svg{width:14px;height:14px}
+.ch-fav svg{width:13px;height:13px}
 
-.sec-hdr{display:flex;justify-content:space-between;align-items:center;margin:8px 0 14px}
-.sec-hdr h2{font-size:18px;font-weight:700}
+.sec-hdr{display:flex;justify-content:space-between;align-items:center;margin:6px 0 12px}
+.sec-hdr h2{font-size:17px;font-weight:700}
 .sec-hdr span{font-size:12px;color:var(--mut)}
 
-.empty,.loading{padding:60px 20px;text-align:center;color:var(--mut);background:var(--card);border-radius:14px;border:1px dashed #232938}
-.spinner{width:42px;height:42px;border:3px solid #232938;border-top-color:var(--acc);border-radius:50%;margin:0 auto 14px;animation:spin 1s linear infinite}
+.empty,.loading{padding:50px 20px;text-align:center;color:var(--mut);background:var(--card);border-radius:14px;border:1px dashed #232938}
+.spinner{width:36px;height:36px;border:3px solid #232938;border-top-color:var(--acc);border-radius:50%;margin:0 auto 12px;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
 .modal-bg.open{display:flex}
 .modal{background:var(--bg2);border-radius:18px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;border:1px solid #232938;animation:pop .25s ease}
 @keyframes pop{from{transform:scale(.9);opacity:0}}
-.modal-hdr{padding:18px 22px;border-bottom:1px solid #232938;display:flex;justify-content:space-between;align-items:center}
-.modal-hdr h3{font-size:17px}
-.modal-body{padding:22px}
+.modal-hdr{padding:16px 22px;border-bottom:1px solid #232938;display:flex;justify-content:space-between;align-items:center}
+.modal-hdr h3{font-size:16px}
+.modal-body{padding:20px}
 
-.fld{margin-bottom:14px}
-.fld label{display:block;font-size:12px;color:var(--mut);margin-bottom:6px;font-weight:600}
-.fld input,.fld select,.fld textarea{width:100%;padding:10px 14px;background:var(--bg);border:1px solid #232938;border-radius:10px;color:var(--txt);font-size:14px;outline:none}
+.fld{margin-bottom:12px}
+.fld label{display:block;font-size:12px;color:var(--mut);margin-bottom:5px;font-weight:600}
+.fld input,.fld select,.fld textarea{width:100%;padding:9px 12px;background:var(--bg);border:1px solid #232938;border-radius:9px;color:var(--txt);font-size:14px;outline:none}
 .fld input:focus{border-color:var(--acc)}
-.fld textarea{resize:vertical;min-height:100px;font-family:monospace;font-size:12px}
+.fld textarea{resize:vertical;min-height:90px;font-family:monospace;font-size:12px}
 .fld small{color:var(--mut);font-size:11px;display:block;margin-top:4px}
 .fld-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.fld-tabs{display:flex;gap:6px;margin-bottom:14px;border-bottom:1px solid #232938}
+.fld-tabs{display:flex;gap:4px;margin-bottom:14px;border-bottom:1px solid #232938}
 .fld-tab{padding:8px 14px;font-size:12px;font-weight:600;color:var(--mut);border-bottom:2px solid transparent;cursor:pointer;transition:.2s}
 .fld-tab.active{color:var(--acc);border-color:var(--acc)}
 
-.btn{padding:10px 18px;border-radius:10px;font-size:13px;font-weight:600;background:var(--card);border:1px solid #232938;transition:.2s;display:inline-flex;align-items:center;gap:6px}
+.btn{padding:9px 16px;border-radius:9px;font-size:13px;font-weight:600;background:var(--card);border:1px solid #232938;transition:.2s;display:inline-flex;align-items:center;gap:6px}
 .btn:hover{background:var(--card2)}
 .btn-p{background:linear-gradient(135deg,var(--acc),var(--acc2));border:none;color:#fff}
 .btn-p:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(255,59,107,.3)}
@@ -147,28 +150,41 @@ header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(1
 .btn-sm{padding:6px 12px;font-size:12px}
 
 .src-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
-.src-card{background:var(--card);border:1px solid #232938;border-radius:12px;padding:18px 12px;text-align:center;cursor:pointer;transition:.2s}
+.src-card{background:var(--card);border:1px solid #232938;border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:.2s}
 .src-card:hover{border-color:var(--acc);background:var(--card2)}
-.src-card .ico{font-size:30px;margin-bottom:8px}
-.src-card h4{font-size:13px;margin-bottom:4px}
-.src-card p{font-size:11px;color:var(--mut)}
+.src-card .ico{font-size:28px;margin-bottom:6px}
+.src-card h4{font-size:13px;margin-bottom:3px}
+.src-card p{font-size:10px;color:var(--mut)}
 
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--card2);border:1px solid #232938;padding:12px 20px;border-radius:10px;font-size:13px;z-index:300;transition:.3s;box-shadow:0 8px 30px rgba(0,0,0,.4);max-width:90%}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--card2);border:1px solid #232938;padding:10px 18px;border-radius:10px;font-size:13px;z-index:300;transition:.3s;box-shadow:0 8px 30px rgba(0,0,0,.4);max-width:90%}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .toast.ok{border-color:var(--green)}
 .toast.err{border-color:var(--red)}
 
-.fab{position:fixed;bottom:20px;right:20px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#fff;cursor:pointer;z-index:90;box-shadow:0 6px 20px rgba(255,59,59,.4);transition:.2s}
+.fab{position:fixed;bottom:20px;right:20px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#fff;cursor:pointer;z-index:90;box-shadow:0 6px 20px rgba(255,59,59,.4);transition:.2s}
 .fab:hover{transform:scale(1.1) rotate(90deg)}
 .fab svg{width:22px;height:22px}
 
-.filters{display:flex;gap:10px;padding:0 22px 14px;max-width:1700px;margin:auto;flex-wrap:wrap}
-.chip{padding:6px 12px;background:var(--card);border:1px solid #232938;border-radius:18px;font-size:12px;cursor:pointer;transition:.2s}
+.filters{display:flex;gap:8px;padding:0 22px 12px;max-width:1700px;margin:auto;flex-wrap:wrap}
+.chip{padding:5px 11px;background:var(--card);border:1px solid #232938;border-radius:18px;font-size:12px;cursor:pointer;transition:.2s}
 .chip:hover{background:var(--card2)}
 .chip.active{background:var(--acc);border-color:var(--acc);color:#fff}
 
-footer{text-align:center;padding:20px;color:var(--mut);font-size:12px;border-top:1px solid #1f2533;margin-top:30px}
+footer{text-align:center;padding:18px;color:var(--mut);font-size:12px;border-top:1px solid #1f2533;margin-top:30px}
 footer a{color:var(--acc2)}
+
+/* Drop zone */
+.dropzone{
+  border:2px dashed #2a3142;border-radius:12px;padding:24px;
+  text-align:center;background:var(--bg);transition:.2s;cursor:pointer;
+}
+.dropzone:hover,.dropzone.drag{border-color:var(--acc);background:rgba(255,59,107,.05)}
+.dropzone .ico{font-size:36px;margin-bottom:8px}
+.dropzone p{font-size:12px;color:var(--mut);margin:4px 0}
+.dropzone .or{margin:10px 0;font-size:11px;color:var(--mut);position:relative}
+.dropzone .or::before,.dropzone .or::after{content:"";position:absolute;top:50%;width:30%;height:1px;background:#2a3142}
+.dropzone .or::before{left:0}
+.dropzone .or::after{right:0}
 
 /* Error state in player */
 .player-err{
@@ -177,19 +193,21 @@ footer a{color:var(--acc2)}
   color:#fff;text-align:center;padding:20px;z-index:6;
 }
 .player-err.show{display:flex}
-.player-err .ico{font-size:50px;margin-bottom:14px}
-.player-err h3{font-size:18px;margin-bottom:6px}
-.player-err p{font-size:13px;color:var(--mut);margin-bottom:14px}
+.player-err .ico{font-size:40px;margin-bottom:10px}
+.player-err h3{font-size:15px;margin-bottom:4px}
+.player-err p{font-size:12px;color:var(--mut);margin-bottom:12px}
 
 @media(max-width:768px){
-  .player-sticky{top:72px}
+  .player-sticky{top:68px}
   .hdr{padding:0 12px}
   .catbar,.filters,.main,.banner{margin-left:12px;margin-right:12px}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
-  .ch{padding:10px 6px}
-  .ch-img{width:56px;height:56px}
-  .pctrls{padding:10px}
-  .pvol input[type=range]{width:60px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:8px}
+  .ch{padding:8px 4px}
+  .ch-img{width:50px;height:50px}
+  .pctrls{padding:6px 8px}
+  .pvol input[type=range]{width:50px}
+  .ptitle{font-size:11px}
+  .player-sticky{padding:0 12px 8px}
 }
 </style>
 </head>
@@ -222,7 +240,7 @@ footer a{color:var(--acc2)}
   </div>
 </header>
 
-<!-- Big sticky player -->
+<!-- Smaller sticky player -->
 <div class="player-sticky">
   <div class="player-wrap paused" id="playerWrap">
     <video id="vid" playsinline crossorigin="anonymous" preload="metadata"></video>
@@ -230,14 +248,14 @@ footer a{color:var(--acc2)}
       <div>
         <div class="big">📺</div>
         <div>Select a channel to start watching</div>
-        <p style="font-size:11px;color:var(--mut);margin-top:10px">Supports M3U8 / TS / MP4 / WebM streams</p>
+        <p class="small">Supports M3U8 / TS / MP4 / WebM · Upload or load a playlist</p>
       </div>
     </div>
     <div class="player-err" id="playerErr">
       <div class="ico">⚠️</div>
       <h3>Stream Error</h3>
       <p id="errMsg">Unable to load this stream</p>
-      <div style="display:flex;gap:8px">
+      <div style="display:flex;gap:6px">
         <button class="btn btn-p btn-sm" onclick="retryStream()">🔄 Retry</button>
         <button class="btn btn-sm" onclick="document.getElementById('playerErr').classList.remove('show')">Dismiss</button>
       </div>
@@ -256,7 +274,7 @@ footer a{color:var(--acc2)}
         <input type="range" id="vol" min="0" max="1" step="0.01" value="1" oninput="setVol(this.value)" />
       </div>
       <div class="ptitle" id="pTitle">No channel</div>
-      <div class="pinfo" id="pInfo">LIVE</div>
+      <div class="pinfo" id="pInfo">READY</div>
       <button class="pbtn" onclick="toggleFs()" title="Fullscreen">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
       </button>
@@ -294,6 +312,7 @@ footer a{color:var(--acc2)}
   <div>TVX Pro · Built for entertainment · <a href="#" onclick="event.preventDefault();openAdmin()">Admin</a></div>
 </footer>
 
+<!-- Source Modal -->
 <div class="modal-bg" id="srcModal">
   <div class="modal">
     <div class="modal-hdr">
@@ -304,7 +323,7 @@ footer a{color:var(--acc2)}
       <div class="src-grid">
         <div class="src-card" onclick="srcType('m3u')">
           <div class="ico">📺</div>
-          <h4>M3U Playlist</h4>
+          <h4>M3U / M3U8</h4>
           <p>URL or local file</p>
         </div>
         <div class="src-card" onclick="srcType('xtream')">
@@ -318,11 +337,12 @@ footer a{color:var(--acc2)}
           <p>Portal + MAC</p>
         </div>
       </div>
-      <div id="srcForm" style="margin-top:20px"></div>
+      <div id="srcForm" style="margin-top:18px"></div>
     </div>
   </div>
 </div>
 
+<!-- Admin Modal -->
 <div class="modal-bg" id="adminModal">
   <div class="modal">
     <div class="modal-hdr">
@@ -339,7 +359,7 @@ footer a{color:var(--acc2)}
         <p style="font-size:11px;color:var(--mut);text-align:center;margin-top:10px">Default: <code>admin123</code></p>
       </div>
       <div id="adminPanel" style="display:none">
-        <h4 style="margin-bottom:12px">📋 Source Configuration</h4>
+        <h4 style="margin-bottom:10px">📋 Source Configuration</h4>
         <div class="fld">
           <label>Active Source Type</label>
           <select id="cfgType">
@@ -352,31 +372,31 @@ footer a{color:var(--acc2)}
           <label>M3U URL</label>
           <input type="text" id="cfgM3u" placeholder="https://example.com/playlist.m3u" />
         </div>
-        <h4 style="margin:18px 0 12px">⚡ Xtream Codes</h4>
+        <h4 style="margin:16px 0 10px">⚡ Xtream Codes</h4>
         <div class="fld-row">
           <div class="fld"><label>Server</label><input id="cfgXServer" placeholder="http://server.com:8080" /></div>
           <div class="fld"><label>Username</label><input id="cfgXUser" /></div>
         </div>
         <div class="fld"><label>Password</label><input id="cfgXPw" type="password" /></div>
-        <h4 style="margin:18px 0 12px">🛰️ Stalker Portal</h4>
+        <h4 style="margin:16px 0 10px">🛰️ Stalker Portal</h4>
         <div class="fld"><label>Portal URL</label><input id="cfgSUrl" placeholder="http://portal.com/c/" /></div>
         <div class="fld"><label>MAC Address</label><input id="cfgSMac" placeholder="00:1A:79:XX:XX:XX" /></div>
-        <h4 style="margin:18px 0 12px">📅 EPG (optional)</h4>
+        <h4 style="margin:16px 0 10px">📅 EPG (optional)</h4>
         <div class="fld">
           <label>XMLTV URL</label>
           <input id="cfgEpg" placeholder="https://example.com/epg.xml" />
           <small>Program guide for channels</small>
         </div>
-        <h4 style="margin:18px 0 12px">🎨 Branding</h4>
+        <h4 style="margin:16px 0 10px">🎨 Branding</h4>
         <div class="fld"><label>Site Name</label><input id="cfgName" placeholder="TVX Pro" /></div>
         <div class="fld"><label>Logo URL (optional)</label><input id="cfgLogo" /></div>
-        <h4 style="margin:18px 0 12px">🔐 Security</h4>
+        <h4 style="margin:16px 0 10px">🔐 Security</h4>
         <div class="fld">
           <label>New Admin Password</label>
           <input type="password" id="cfgPw" placeholder="Leave blank to keep current" />
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn btn-p" onclick="saveAdmin()">💾 Save & Reload</button>
+          <button class="btn btn-p" onclick="saveAdmin()">💾 Save</button>
           <button class="btn" onclick="exportCfg()">📤 Export</button>
           <button class="btn" onclick="document.getElementById('importFile').click()">📥 Import</button>
           <input type="file" id="importFile" accept=".json" style="display:none" onchange="importCfg(event)" />
@@ -387,6 +407,7 @@ footer a{color:var(--acc2)}
   </div>
 </div>
 
+<!-- Favorites Modal -->
 <div class="modal-bg" id="favModal">
   <div class="modal">
     <div class="modal-hdr">
@@ -423,6 +444,27 @@ function fbEl(name){
   return span;
 }
 
+// Detect if a parsed M3U is actually a single-stream M3U8 file
+function detectM3U8Type(text){
+  // If it has #EXTM3U and multiple #EXTINF → it's a playlist
+  if(/^#EXTM3U/m.test(text) && (text.match(/#EXTINF/g)||[]).length > 1) return 'playlist';
+  // If it has #EXT-X-* tags → it's a manifest (single stream)
+  if(/^#EXT-X/m.test(text)) return 'manifest';
+  // If first line is #EXTM3U but no #EXTINF → treat as manifest pointing to a single stream
+  if(/^#EXTM3U/m.test(text) && (text.match(/#EXTINF/g)||[]).length === 1) return 'manifest';
+  return 'unknown';
+}
+
+// Extract the first playable URL from a single-stream M3U8 manifest
+function extractStreamFromM3U8(text){
+  // The URL is just the last non-comment line, or the line after #EXTINF
+  const lines = text.split(/\r?\n/).map(l=>l.trim()).filter(l=>l);
+  for(let i=lines.length-1;i>=0;i--){
+    if(!lines[i].startsWith('#')) return lines[i];
+  }
+  return null;
+}
+
 // ========== STATE ==========
 const STATE = {
   channels: [],
@@ -434,13 +476,12 @@ const STATE = {
   activeQuery: '',
   current: null,
   hls: null,
-  retryCount: 0,
   favs: JSON.parse(localStorage.getItem('tvx_favs') || '[]'),
   recents: JSON.parse(localStorage.getItem('tvx_recents') || '[]'),
   epg: null,
   cfg: JSON.parse(localStorage.getItem('tvx_cfg') || 'null') || {
     type: 'm3u',
-    m3u: 'https://raw.githubusercontent.com/olkite/olkitetv/refs/heads/main/olkitetv.m3u',
+    m3u: 'https://raw.githubusercontent.com/sydul104/main04/refs/heads/main/my',
     xtream: { server:'', user:'', pass:'' },
     stalker: { url:'', mac:'' },
     epg: '',
@@ -487,16 +528,11 @@ function parseM3U(text){
 }
 
 // ========== FETCH WITH FALLBACK ==========
-async function fetchWithFallback(url, isBinary){
-  // Direct
+async function fetchWithFallback(url){
   try {
     const r = await fetch(url);
-    if(r.ok){
-      if(isBinary) return await r.blob();
-      return await r.text();
-    }
+    if(r.ok) return await r.text();
   } catch(e){}
-  // Proxies
   const proxies = [
     u => 'https://corsproxy.io/?' + encodeURIComponent(u),
     u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
@@ -504,10 +540,7 @@ async function fetchWithFallback(url, isBinary){
   for(const pfn of proxies){
     try {
       const r = await fetch(pfn(url));
-      if(r.ok){
-        if(isBinary) return await r.blob();
-        return await r.text();
-      }
+      if(r.ok) return await r.text();
     } catch(e){}
   }
   throw new Error('All fetch attempts failed');
@@ -518,6 +551,30 @@ async function loadM3U(url){
   showLoading('Loading playlist...');
   try {
     const text = await fetchWithFallback(url);
+
+    // Detect if it's a single-stream M3U8 file
+    const type = detectM3U8Type(text);
+    if(type === 'manifest'){
+      const streamUrl = extractStreamFromM3U8(text);
+      if(streamUrl){
+        toast('Detected single M3U8 stream — playing directly', 'ok');
+        // If the manifest URL is relative, resolve it
+        const fullUrl = new URL(streamUrl, url).href;
+        STATE.channels = [{
+          name: 'M3U8 Stream',
+          url: fullUrl,
+          logo: '',
+          group: 'M3U8',
+          id: '', chno: ''
+        }];
+        STATE.cfg.m3u = url;
+        saveCfg();
+        postLoad();
+        setTimeout(()=>playCh(0), 300);
+        return;
+      }
+    }
+
     STATE.channels = parseM3U(text);
     postLoad();
   } catch(e){
@@ -528,6 +585,26 @@ async function loadM3U(url){
 async function loadM3UFromText(text, name){
   showLoading('Parsing playlist...');
   try {
+    const type = detectM3U8Type(text);
+    if(type === 'manifest'){
+      const streamUrl = extractStreamFromM3U8(text);
+      if(streamUrl){
+        toast('Single M3U8 stream — playing directly', 'ok');
+        STATE.channels = [{
+          name: name || 'M3U8 Stream',
+          url: streamUrl,
+          logo: '',
+          group: 'M3U8',
+          id: '', chno: ''
+        }];
+        STATE.cfg.type = 'm3u';
+        STATE.cfg.m3u = 'local:' + (name||'file');
+        saveCfg();
+        postLoad();
+        setTimeout(()=>playCh(0), 300);
+        return;
+      }
+    }
     STATE.channels = parseM3U(text);
     STATE.cfg.type = 'm3u';
     if(name) STATE.cfg.m3u = 'local:' + name;
@@ -758,7 +835,6 @@ function renderGrid(list){
 }
 
 // ========== UNIVERSAL PLAYER ==========
-// Supports: M3U8 (HLS), TS, MP4, WebM, MKV (browser-dependent), AAC/MP3 audio
 function playStream(url, name){
   if(!url){ toast('No stream URL','err'); return; }
   const v = document.getElementById('vid');
@@ -766,7 +842,6 @@ function playStream(url, name){
   document.getElementById('playerErr').classList.remove('show');
   document.getElementById('pTitle').textContent = name || 'Live Stream';
   
-  // Destroy any previous instance
   if(STATE.hls){
     try{ STATE.hls.destroy(); }catch(e){}
     STATE.hls = null;
@@ -777,13 +852,11 @@ function playStream(url, name){
   const isHls = /\.m3u8(\?|$)/i.test(url);
   const isMpegTs = /\.ts(\?|$)/i.test(url) && !isHls;
 
-  // Force live settings
   v.autoplay = true;
   v.muted = false;
   v.playsInline = true;
   v.controls = true;
 
-  // HLS via hls.js (best compatibility)
   if(isHls && window.Hls && Hls.isSupported()){
     STATE.hls = new Hls({
       enableWorker: true,
@@ -816,13 +889,11 @@ function playStream(url, name){
       }
     });
   }
-  // Native HLS (Safari, iOS, some Android browsers)
   else if(isHls && v.canPlayType('application/vnd.apple.mpegurl')){
     v.src = url;
     v.addEventListener('loadedmetadata', ()=>{ v.play().catch(()=>{}); }, { once:true });
-    document.getElementById('pInfo').textContent = 'HLS (native)';
+    document.getElementById('pInfo').textContent = 'HLS';
   }
-  // Direct video file
   else {
     v.src = url;
     v.addEventListener('loadedmetadata', ()=>{ v.play().catch(()=>{}); }, { once:true });
@@ -862,7 +933,6 @@ function playCh(idx){
   saveRecents();
   playStream(c.url, c.name);
   applyFilter();
-  // Scroll to top so player is visible
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -956,8 +1026,8 @@ function parseXMLTV(xml){
 // ========== CUSTOM PLAYER CONTROLS ==========
 function togglePlay(){
   const v = document.getElementById('vid');
-  if(v.paused){ v.play(); }
-  else { v.pause(); }
+  if(v.paused) v.play();
+  else v.pause();
 }
 function stopStream(){
   const v = document.getElementById('vid');
@@ -993,7 +1063,6 @@ async function togglePIP(){
   }catch(e){ toast('PiP failed','err'); }
 }
 
-// Update play/pause icon
 const v = document.getElementById('vid');
 const ppIcon = document.getElementById('ppIcon');
 const wrap = document.getElementById('playerWrap');
@@ -1012,7 +1081,6 @@ v.addEventListener('volumechange', ()=>{
   document.getElementById('vol').value = v.volume;
   document.getElementById('muteBtn').style.opacity = v.muted ? .5 : 1;
 });
-// Click video to play/pause
 v.addEventListener('click', togglePlay);
 
 // ========== MODALS ==========
@@ -1024,17 +1092,33 @@ function srcType(t){
     <div class="fld-tabs">
       <div class="fld-tab active" onclick="srcTab(this,'url')">URL</div>
       <div class="fld-tab" onclick="srcTab(this,'file')">Upload File</div>
+      <div class="fld-tab" onclick="srcTab(this,'single')">Single M3U8</div>
     </div>
     <div id="m3uUrl">
-      <div class="fld"><label>M3U / M3U8 URL</label><input id="srcM3u" placeholder="https://... or .m3u8" value="${esc(STATE.cfg.m3u)}"></div>
+      <div class="fld"><label>M3U / M3U8 Playlist URL</label><input id="srcM3u" placeholder="https://.../playlist.m3u or .m3u8" value="${esc(STATE.cfg.m3u)}"></div>
       <button class="btn btn-p btn-full" onclick="setM3u()">Load Playlist</button>
     </div>
     <div id="m3uFile" style="display:none">
-      <div class="fld">
-        <label>Choose M3U / M3U8 / TXT file</label>
-        <input type="file" id="m3uFileInp" accept=".m3u,.m3u8,.txt" onchange="loadM3UFile(event)" />
+      <div class="dropzone" id="dropzone"
+           onclick="document.getElementById('m3uFileInp').click()"
+           ondragover="event.preventDefault();this.classList.add('drag')"
+           ondragleave="this.classList.remove('drag')"
+           ondrop="event.preventDefault();this.classList.remove('drag');handleDrop(event)">
+        <div class="ico">📁</div>
+        <p><strong>Click to choose</strong> or drag & drop</p>
+        <p>Supports .m3u, .m3u8, .txt files</p>
+        <div class="or">OR</div>
+        <button class="btn btn-sm" onclick="event.stopPropagation();document.getElementById('m3uFileInp').click()">Browse Files</button>
+        <input type="file" id="m3uFileInp" accept=".m3u,.m3u8,.txt" style="display:none" onchange="loadM3UFile(event)" />
       </div>
-      <p style="font-size:11px;color:var(--mut);text-align:center">Supports local M3U / M3U8 / TXT playlist files</p>
+    </div>
+    <div id="m3uSingle" style="display:none">
+      <div class="fld">
+        <label>Direct M3U8 Stream URL</label>
+        <input id="srcM3u8Url" placeholder="https://server.com/stream/playlist.m3u8" />
+        <small>Paste a direct .m3u8 link — it will play instantly</small>
+      </div>
+      <button class="btn btn-p btn-full" onclick="playSingleM3U8()">▶ Play Stream</button>
     </div>`;
   else if(t==='xtream') f.innerHTML = `
     <div class="fld"><label>Server</label><input id="srcXS" placeholder="http://server:8080" value="${esc(STATE.cfg.xtream.server)}"></div>
@@ -1052,6 +1136,7 @@ function srcTab(el,which){
   el.classList.add('active');
   document.getElementById('m3uUrl').style.display = which==='url'?'block':'none';
   document.getElementById('m3uFile').style.display = which==='file'?'block':'none';
+  document.getElementById('m3uSingle').style.display = which==='single'?'block':'none';
 }
 async function loadM3UFile(ev){
   const f = ev.target.files[0];
@@ -1059,6 +1144,31 @@ async function loadM3UFile(ev){
   const text = await f.text();
   loadM3UFromText(text, f.name);
   closeSrc();
+}
+async function handleDrop(ev){
+  const f = ev.dataTransfer.files[0];
+  if(!f) return;
+  const text = await f.text();
+  loadM3UFromText(text, f.name);
+  closeSrc();
+}
+function playSingleM3U8(){
+  const u = document.getElementById('srcM3u8Url').value.trim();
+  if(!u) return toast('Enter an M3U8 URL','err');
+  if(!/\.m3u8(\?|$)/i.test(u)) return toast('URL must end with .m3u8','err');
+  closeSrc();
+  STATE.channels = [{
+    name: 'M3U8 Stream',
+    url: u,
+    logo: '',
+    group: 'M3U8',
+    id: '', chno: ''
+  }];
+  STATE.cfg.type = 'm3u';
+  STATE.cfg.m3u = u;
+  saveCfg();
+  postLoad();
+  setTimeout(()=>playCh(0), 300);
 }
 function setM3u(){
   const u = document.getElementById('srcM3u').value.trim();
@@ -1182,11 +1292,19 @@ document.addEventListener('keydown',e=>{
 // ========== INIT ==========
 function init(){
   document.getElementById('siteName').textContent = STATE.cfg.name;
-  // Show M3U upload as default if user hasn't set anything
-  if(STATE.cfg.type==='m3u') loadM3U(STATE.cfg.m3u);
+  if(STATE.cfg.type==='m3u'){
+    // Local files don't auto-reload
+    if(STATE.cfg.m3u && !STATE.cfg.m3u.startsWith('local:')){
+      loadM3U(STATE.cfg.m3u);
+    } else {
+      showError('No playlist loaded. Click the source button to begin.');
+    }
+  }
   else if(STATE.cfg.type==='xtream') loadXtream();
   else if(STATE.cfg.type==='stalker') loadStalker();
-  else loadM3U(STATE.cfg.m3u);
+  else {
+    document.getElementById('grid').innerHTML = '<div class="empty">👋 Welcome to TVX Pro<br><br><button class="btn btn-p" onclick="openSrc()">Load Playlist</button></div>';
+  }
 }
 init();
 </script>
